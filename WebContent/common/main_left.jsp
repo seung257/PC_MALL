@@ -77,7 +77,7 @@ function MM_showHideLayers() {
 
 <table width=125 border=2 cellspacing=1 cellpadding=0>   
   <tr> 
-      <td><img src="../img/image_case.gif" width=125 height=150></td>
+      <td><img src="../img/rilakkuma.png" width=125 height=150></td>
   </tr>
 </table>
 

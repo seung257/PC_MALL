@@ -52,7 +52,7 @@ try {
 <BODY leftmargin='0' topmargin='0' marginwidth='0' marginheight='0'>
     <jsp:include page="../common/basic_screen.jsp" flush="true"/>
 
-<center><br>
+<!-- <center> --><br>
   <table border=1 width=550 height=30 bordercolor=black>
 	<tr>
 		<td align=center bgcolor=0063ce><font size=3 color=#FFFFFF><b>게시물 읽기</b></td>
@@ -97,7 +97,7 @@ try {
 	   	</td>
 	  </TR>
 	</table>
-	</center>
+	<!-- </center> -->
 		<jsp:include page="../common/basic_copyright.jsp" flush="true"/>
 </body>
 </html>

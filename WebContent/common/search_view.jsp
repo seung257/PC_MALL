@@ -1,5 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" import="java.sql.*,oracle.dbpool.*"  %>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <HTML>
 	<HEAD>
 		<TITLE>컴퓨터 전문쇼핑몰</TITLE>
@@ -27,7 +29,7 @@
 		while(rs1.next()) {
 		count=rs1.getInt(1);
 %>   
-		<center>
+		<%-- <center> --%>
 		<font color=red><%= s_word %></font> 에 대한 
 		<font color=red><%= count %></font> 개의 제품 검색결과 입니다!<br>
 <%
@@ -58,7 +60,10 @@
 			<tr bgcolor="edf5fe"> 
 				<td align=center><img border=0 name=PicMedium height=30 width=30 src="../product/image/<%=photo%>"></td>
 				<td  height=30>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../product/product.jsp?i=<%= id%>"> <%=name%></a></td>
-				<td  height=30>&nbsp;&nbsp;&nbsp;&nbsp;<%=price%>원</td>
+				<td  height=30>
+					   <c:set var="fmtPrice" value="<%=price%>"/> 
+					   <font color=black>&nbsp;<fmt:formatNumber value="${fmtPrice }" pattern="#,###" />&nbsp;원</font>
+				</td>	
 			</tr>
 <%	
 			}
@@ -73,7 +78,7 @@
 	}
 %>
 		</table>
-		</center>
+		<%-- </center> --%>
 		<!--  검색 끝 -->
 	<jsp:include page="../common/basic_copyright.jsp" flush="true"/>
 </BODY>

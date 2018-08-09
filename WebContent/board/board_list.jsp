@@ -136,9 +136,11 @@
 <% 
 			}
 			 //페이지 번호 나열하기
+			 //추가 - 현재페이지 강조
+			
 			for(int i=startPage ; i<(startPage+limit);i++){
 				if( i == pageNUM){%>
-					&nbsp;<%=i%>&nbsp;
+					<font color="red">><b>&nbsp;<%=i%>&nbsp;</b></font>
 <% 
 				} else { 
 %>

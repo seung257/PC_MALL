@@ -1,5 +1,8 @@
 <%@ page contentType="text/html;charset=UTF-8" import="java.sql.*,oracle.dbpool.*,java.util.*" %>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
 <HTML>
 	<HEAD>
 		<TITLE>카테고리 전제 항목 보기</TITLE>
@@ -65,7 +68,10 @@
 						<tr bgcolor="#eff4f8"> 
 							<td align=center><img border=0 name=PicMedium height=30 width=30 src="image/<%=photo%>"></td>
 							<td  height=30>&nbsp;<a href="product.jsp?i=<%= id %>">[<%= c_name %>]&nbsp;<%= name %></font></a></td>
-							<td  height=30>&nbsp;<%= price %>원</font></td>
+							<td  height=30>
+									<c:set var="fmtPrice" value="<%=price%>"/>
+				 					<font color=black>&nbsp;<fmt:formatNumber value="${fmtPrice }" pattern="#,###" />&nbsp;원</font>
+							</td>
 						</tr>
 <%	
 		}

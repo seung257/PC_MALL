@@ -1,5 +1,8 @@
 <%@ page  contentType="text/html;charset=euc-kr" import="java.sql.*,oracle.dbpool.*" %> 
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
 <HTML>
 	<HEAD>
 		<TITLE>컴퓨터전문쇼핑몰</TITLE>
@@ -53,10 +56,13 @@
 				</tr>
 				<tr>
 					<td width=60 align=right bgcolor=#7eaee9>가격</td>
-					<td bgcolor=cde6ff>&nbsp;&nbsp;<%=price%>&nbsp;원</td>
-					<td>
-				<c:set var="fmtPrice" value="<%=price%>"/>
-				<font color=red>&nbsp;[<fmt:formatNumber value="${fmtPrice }" pattern="#,###" />&nbsp;원]</font>
+					<td bgcolor=cde6ff>
+					    <c:set var="fmtPrice" value="<%=price%>"/> 
+					   <font color=red>&nbsp;[<fmt:formatNumber value="${fmtPrice }" pattern="#,###" />&nbsp;원]</font>
+					</td>
+					
+				
+				
 				</td>
 				</tr>
 				<tr>
@@ -87,10 +93,11 @@
 				<td bgcolor=cde6ff>&nbsp;&nbsp;<%=name%></td>
 			</tr>
 			<tr>
-			
 				<td width=60 align=right bgcolor=#7eaee9>가격</td>
-				<td bgcolor=cde6ff>&nbsp;&nbsp;<%=price%>&nbsp;원</td>
-				
+				<td bgcolor=cde6ff>
+					   <c:set var="fmtPrice" value="<%=price%>"/> 
+					   <font color=red>&nbsp;[<fmt:formatNumber value="${fmtPrice }" pattern="#,###" />&nbsp;원]</font>
+				</td>			
 			</tr>
 			<tr>
 				<td width=60 align=right bgcolor=#7eaee9>제조회사</td>
