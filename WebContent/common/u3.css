@@ -1,0 +1,30 @@
+.input {font-size: 11px; font-family: 굴림,굴림체, arial }
+
+font.c {	font-size: 12px; color: #000000; font-family: 굴림,굴림체, arial}
+.unnamed1 {  font-family: "바탕"; font-size: 16px; color: #dd4800; text-decoration: blink}
+.unnamed2 {  font-family: "바탕"; font-size: 18px; color: #dd4800; text-decoration: blink}
+
+body {
+	color: black; font-size: 10pt; line-height: 140%; image-decoration: none
+}
+th {
+	color: black; font-size: 10pt; line-height: 140%; image-decoration: none
+}
+tr {
+	color: black; font-size: 10pt; line-height: 140%; image-decoration: none
+}
+td {
+	color: black; font-size: 10pt; line-height: 140%; image-decoration: none
+}
+a:visited {
+	border-bottom-width: 0px; border-left-width: 0px; border-right-width: 
+	0px; border-top-width: 0px; text-decoration: none; image-decoration: none
+}
+a:hover {
+	border-bottom-width: 0px; border-left-width: 0px; border-right-width: 
+	0px; border-top-width: 0px; color: red; text-decoration: none; image-decoration: none
+}
+a:link {
+	border-bottom-width: 0px; border-left-width: 0px; border-right-width: 
+	0px; border-top-width: 0px; text-decoration: none; image-decoration: none
+}
